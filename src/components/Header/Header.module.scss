@@ -1,0 +1,36 @@
+.header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &__content {
+        padding: 20px;
+    }
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 0.1em;
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        display: inline-block;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            background-color: white;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
