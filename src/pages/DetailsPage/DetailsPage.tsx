@@ -10,8 +10,6 @@ const DetailsPage: React.FC = () => {
     const state = useTypedSelector(state => state.photo.photos)
     const currentPhoto = useMemo(() => state.filter( el => el.id === id), [id, state])
 
-    console.log(currentPhoto)
-
     return (
         <div className={classes.details}>
             <BackButton />
